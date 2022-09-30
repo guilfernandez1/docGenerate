@@ -1,0 +1,19 @@
+title Document Generate
+
+activate docGenerate #lightgreen
+
+docGenerate->Swagger:**Method:** GET\n**Route:** www.example.com.br/swagger
+
+activate Swagger #lightgreen
+
+Swagger-->docGenerate:**return** data
+
+deactivate Swagger
+
+alt Create README.md
+docGenerate->docGenerate:readmeBuilderTemplate
+end
+
+alt Create Routes details
+docGenerate->docGenerate:detailsBuilderTemplate
+end
